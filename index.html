@@ -4,19 +4,37 @@
 </head>
 <body>
   <div class="hci-cards">
-    <ul>
-        <li data-background="image-url.jpg">
+    <ul id="cardDeck">
+      <li v-for="card in cards">
+        <div class="flick-title">{{ card.title }}</div>
+        <div class="flick-sub-text">{{{ card.desc }}}</div>
+      </li>
+        <!-- <li data-background="image-url.jpg">
             <div class="flick-title">Example Heading1</div>
             <div class="flick-sub-text">Sub TextSub TextSub TextSub Text</div>
-        </li>
-        <li data-background="image-url.jpg">
-            <div class="flick-title">Example Heading2</div>
-            <div class="flick-sub-text">Sub TextSub TextSub TextSub Text</div>
-        </li>
+        </li> -->
     </ul>
   </div>
   <script src="bower_components/flickerplate/js/min/hammer-v2.0.3.js"></script>
   <script src="bower_components/flickerplate/js/min/flickerplate.js"></script>
+  <script src="bower_components/vue/dist/vue.min.js"></script>
+  <script>
+    var card = new Vue({
+      el: '#cardDeck',
+      data: {
+        cards: [
+          {
+            title: 'Hypervisor',
+            desc: '<p>A hypervisor or virtual machine monitor (VMM) is a piece of computer software, firmware or hardware that creates and runs virtual machines.</p><p>A computer on which a hypervisor is running one or more virtual machines is defined as a host machine. Each virtual machine is called a guest machine. The hypervisor presents the guest operating systems with a virtual operating platform and manages the execution of the guest operating systems. Multiple instances of a variety of operating systems may share the virtualized hardware resources.</p>'
+          },
+          {
+            title: 'NAS',
+            desc: '<p>Network-attached storage (NAS) is a file-level computer data storage server connected to a computer network providing data access to a heterogeneous group of clients. NAS is specialized for serving files either by its hardware, software, or configuration. It is often manufactured as a computer appliance – a purpose-built specialized computer. NAS systems are networked appliances which contain one or more storage drives, often arranged into logical, redundant storage containers or RAID.</p>'
+          },
+        ]
+      }
+    })
+  </script>
   <script>
     new flickerplate({
         selector: '.hci-cards'

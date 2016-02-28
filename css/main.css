@@ -1,4 +1,16 @@
+body {
+  font-family: "Avenir Next", sans-serif; }
+
 .hci-cards.flickerplate {
   width: 100%;
+  max-width: 800px;
   height: 100%;
-  background: red; }
+  border-radius: 4px;
+  margin: 0 auto;
+  background: #fff;
+  color: #5A6779; }
+  .hci-cards.flickerplate ul.flicks > li .flick-title,
+  .hci-cards.flickerplate ul.flicks > li .flick-sub-text {
+    color: #5A6779; }
+  .hci-cards.flickerplate ul.flicks > li .flick-sub-text {
+    text-align: left; }
