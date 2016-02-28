@@ -1,7 +1,8 @@
 @import "color";
 
 body {
-  font-family: "Avenir Next", sans-serif;
+  font-family : "Avenir Next", sans-serif;
+  background  : $gray-light;
 }
 
 .hci-cards.flickerplate {
@@ -11,14 +12,15 @@ body {
   border-radius : 4px;
   margin        : 0 auto;
   background    : #fff;
-  color         : $gray-dark-d;
 
-  ul.flicks>li .flick-title,
-  ul.flicks>li .flick-sub-text {
-    color: $gray-dark-d;
+  ul.flicks>li .flick-title {
+    color     : $blue;
+    font-size : 2.5em;
   }
 
   ul.flicks>li .flick-sub-text {
-    text-align: left;
+    color      : $gray-dark-d;
+    text-align : left;
+    font-size  : 2em;
   }
 }
