@@ -1,3 +1,4 @@
+var promise = require('es6-promise').polyfill();
 var gulp = require('gulp');
 
 var sass = require('gulp-sass'),
