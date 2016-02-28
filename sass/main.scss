@@ -5,12 +5,19 @@ body {
   font-size   : 24px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .hci-cards.flickerplate {
   width         : 100%;
   height        : 100%;
-  border-radius : 4px;
   margin        : 0 auto;
   background    : #fff;
+
+  ul.flicks > li {
+    padding       : 1.5em;
+  }
 
   ul.flicks>li .flick-title {
     color     : $blue;
@@ -23,5 +30,12 @@ body {
     text-align  : left;
     font-size   : 2em;
     line-height : 1.6em;
+  }
+
+  .dot-navigation .dot {
+    background: $gray;
+    &.active {
+      background: $blue;
+    }
   }
 }
