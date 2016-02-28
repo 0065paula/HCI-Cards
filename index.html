@@ -1,0 +1,24 @@
+<head>
+    <link href="css/flickerplate.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="flicker-example">
+    <ul>
+        <li data-background="image-url.jpg">
+            <div class="flick-title">Example Heading1</div>
+            <div class="flick-sub-text">Sub TextSub TextSub TextSub Text</div>
+        </li>
+        <li data-background="image-url.jpg">
+            <div class="flick-title">Example Heading2</div>
+            <div class="flick-sub-text">Sub TextSub TextSub TextSub Text</div>
+        </li>
+    </ul>
+  </div>
+  <script src="js/min/hammer-v2.0.3.js"></script>
+  <script src="js/min/flickerplate.js"></script>
+  <script>
+    new flickerplate({
+        selector: '.flicker-example'
+    });
+  </script>
+</body>
